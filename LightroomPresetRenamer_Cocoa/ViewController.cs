@@ -20,23 +20,23 @@ namespace LightroomPresetRenamer_Cocoa
         partial void cmdProcess(NSObject sender)
         {
             //throw new NotImplementedException();
-            mainLabel.StringValue = "Clicked";
+            
             var dlg = NSOpenPanel.OpenPanel;
             dlg.CanChooseFiles = false;
             dlg.CanChooseDirectories = true;
-            //   dlg.AllowedFileTypes = new string[] { "txt", "html", "md", "css" };
-            // dlg.RunModal();
-            //    List<Result> fileSearchResults = new List<Result>();
+
             if (dlg.RunModal() == 1)
             {
-                // Nab the first file
+
                 var url = dlg.Urls[0];
                 if (url != null)
                 {
                     var path = url.Path;
-               //     SearchFileNames(path);
+
+                    Processor.goProcess(path);
                 }
             }
+            mainLabel.StringValue = "Processing Complete";
         }
         public override NSObject RepresentedObject
         {
