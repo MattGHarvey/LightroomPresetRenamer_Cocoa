@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightroomPresetRenamer_Cocoa", "LightroomPresetRenamer_Cocoa\LightroomPresetRenamer_Cocoa.csproj", "{9E9C1A19-D941-4440-86F2-733BA9C2E9B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E9C1A19-D941-4440-86F2-733BA9C2E9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9C1A19-D941-4440-86F2-733BA9C2E9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9C1A19-D941-4440-86F2-733BA9C2E9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E9C1A19-D941-4440-86F2-733BA9C2E9B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37B66710-6423-4492-8E1C-62D8A9ADF41F}
+	EndGlobalSection
+EndGlobal
