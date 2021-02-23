@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>LightroomPresetRenamer_Cocoa</string>
+	<string>Lightroom Preset Renamer</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.RobotSprocket.LightroomPresetRenamer-Cocoa</string>
 	<key>CFBundleShortVersionString</key>
