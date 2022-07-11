@@ -47,8 +47,9 @@ namespace LightroomPresetRenamer_Cocoa
             foreach (var property in xmp.Properties)
             {
                 success = false;
-
-                if (property.Path == "crs:Name[1]")
+                Console.WriteLine(property.Path);
+                Console.WriteLine(property.Value);
+                if (property.Path == "crs:Preset/crs:Name"||property.Path== "crs:Name[1]")
                 {
                     string newfilename = property.Value.Trim().Replace('/', '-') + ".xmp";
                     if (string.Compare(newfilename, file.Name.ToString(), CultureInfo.CurrentCulture, CompareOptions.IgnoreNonSpace | CompareOptions.IgnoreCase) == 0)
