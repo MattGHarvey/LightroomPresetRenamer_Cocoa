@@ -15,6 +15,9 @@ namespace LightroomPresetRenamer_Cocoa
 		[Outlet]
 		AppKit.NSTextField mainLabel { get; set; }
 
+		[Action ("cmdOrganize:")]
+		partial void cmdOrganize (Foundation.NSObject sender);
+
 		[Action ("cmdProcess:")]
 		partial void cmdProcess (Foundation.NSObject sender);
 		

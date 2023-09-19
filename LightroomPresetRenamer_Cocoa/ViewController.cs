@@ -38,6 +38,29 @@ namespace LightroomPresetRenamer_Cocoa
             }
             mainLabel.StringValue = "Processing Complete";
         }
+
+        partial void cmdOrganize(NSObject sender)
+        {
+            //throw new NotImplementedException();
+
+            var dlg = NSOpenPanel.OpenPanel;
+            dlg.CanChooseFiles = false;
+            dlg.CanChooseDirectories = true;
+
+            if (dlg.RunModal() == 1)
+            {
+
+                var url = dlg.Urls[0];
+                if (url != null)
+                {
+                    var path = url.Path;
+
+                    Processor.goOrg(path);
+                }
+            }
+            mainLabel.StringValue = "Processing Complete";
+        }
+
         public override NSObject RepresentedObject
         {
             get

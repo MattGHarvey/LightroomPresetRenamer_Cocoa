@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <EnableCodeSigning>false</EnableCodeSigning>
+    <EnableCodeSigning>False</EnableCodeSigning>
     <CodeSigningKey>Mac Developer</CodeSigningKey>
     <CreatePackage>true</CreatePackage>
     <EnablePackageSigning>false</EnablePackageSigning>
@@ -38,7 +38,7 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <EnableCodeSigning>false</EnableCodeSigning>
+    <EnableCodeSigning>False</EnableCodeSigning>
     <CreatePackage>true</CreatePackage>
     <EnablePackageSigning>false</EnablePackageSigning>
     <IncludeMonoRuntime>true</IncludeMonoRuntime>
@@ -57,7 +57,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
     <Reference Include="XmpCore">
-      <HintPath>..\packages\XmpCore.6.1.10\lib\netstandard2.0\XmpCore.dll</HintPath>
+      <HintPath>..\packages\XmpCore.6.1.10.1\lib\netstandard2.0\XmpCore.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -81,8 +81,6 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <None Include="Info %28copy%29.plist" />
-    <None Include="Info %28another copy%29.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />

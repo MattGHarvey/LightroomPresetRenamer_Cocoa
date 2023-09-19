@@ -34,6 +34,33 @@ namespace LightroomPresetRenamer_Cocoa
                 }
             }
         }
+        public static void TraverseDirectoryOrganize(DirectoryInfo directoryInfo)
+        {
+            var subdirectories = directoryInfo.EnumerateDirectories();
+
+            foreach (var subdirectory in subdirectories)
+            {
+                TraverseDirectoryOrganize(subdirectory);
+            }
+
+            var files = directoryInfo.EnumerateFiles();
+
+            foreach (var file in files)
+            {
+
+                if (file.Extension == ".xmp")
+                {
+
+                    HandleFileOrg(file);
+
+                }
+            }
+        }
+        public static void goOrg(string sPath)
+        {
+            DirectoryInfo startDir = new DirectoryInfo(sPath);
+            TraverseDirectoryOrganize(startDir);
+        }
         private static void HandleFile(FileInfo file)
         {
 
@@ -75,6 +102,19 @@ namespace LightroomPresetRenamer_Cocoa
                 file.Delete();
 
             }
+        }
+        private static void HandleFileOrg(FileInfo file)
+        {
+
+
+            IXmpMeta xmp;
+            String curFile = file.FullName.ToString();
+
+            using (var stream = File.OpenRead(curFile))
+                xmp = XmpMetaFactory.Parse(stream);
+            Boolean success = false;
+            foreach (var property in xmp.Properties)
+                Console.WriteLine($"Path={property.Path} Namespace={property.Namespace} Value={property.Value}");
         }
     }
 }
